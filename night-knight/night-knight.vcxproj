@@ -98,6 +98,19 @@
       <AdditionalLibraryDirectories>..\libs\irrKlang\lib\Win32-visualStudio;..\libs\freetype-2.3.5-1-bin\lib;..\libs\Simple OpenGL Image Library\projects\VC9\Debug;..\libs\freeglut\lib;..\libs\glew-1.13.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>freetype.lib;irrKlang.lib;SOIL.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>XCOPY "$(SolutionDir)night-knight\fonts" "$(TargetDir)fonts\" /S
+XCOPY "$(SolutionDir)night-knight\images" "$(TargetDir)images\" /S
+XCOPY "$(SolutionDir)night-knight\levels" "$(TargetDir)levels\" /S
+XCOPY "$(SolutionDir)night-knight\shaders" "$(TargetDir)shaders\" /S
+XCOPY "$(SolutionDir)night-knight\sound" "$(TargetDir)sound\" /S
+XCOPY "$(SolutionDir)libs\glew-1.13.0\bin\Release\Win32\glew32.dll" "$(TargetDir)"
+XCOPY "$(SolutionDir)libs\freeglut\bin\freeglut.dll" "$(TargetDir)"
+XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\irrKlang.dll" "$(TargetDir)"
+XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\ikpFlac.dll" "$(TargetDir)"
+XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\ikpMP3.dll" "$(TargetDir)"
+XCOPY "$(SolutionDir)libs\freetype-2.3.5-1-bin\bin\freetype6.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -117,6 +130,19 @@
       <AdditionalLibraryDirectories>..\libs\irrKlang\lib\Win32-visualStudio;..\libs\freetype-2.3.5-1-bin\lib;..\libs\Simple OpenGL Image Library\projects\VC9\Debug;..\libs\freeglut\lib;..\libs\glew-1.13.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>freetype.lib;irrKlang.lib;SOIL.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>XCOPY "$(SolutionDir)night-knight\fonts" "$(TargetDir)fonts\" /S
+XCOPY "$(SolutionDir)night-knight\images" "$(TargetDir)images\" /S
+XCOPY "$(SolutionDir)night-knight\levels" "$(TargetDir)levels\" /S
+XCOPY "$(SolutionDir)night-knight\shaders" "$(TargetDir)shaders\" /S
+XCOPY "$(SolutionDir)night-knight\sound" "$(TargetDir)sound\" /S
+XCOPY "$(SolutionDir)libs\glew-1.13.0\bin\Release\Win32\glew32.dll" "$(TargetDir)"
+XCOPY "$(SolutionDir)libs\freeglut\bin\freeglut.dll" "$(TargetDir)"
+XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\irrKlang.dll" "$(TargetDir)"
+XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\ikpFlac.dll" "$(TargetDir)"
+XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\ikpMP3.dll" "$(TargetDir)"
+XCOPY "$(SolutionDir)libs\freetype-2.3.5-1-bin\bin\freetype6.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
