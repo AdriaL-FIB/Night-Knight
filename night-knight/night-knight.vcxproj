@@ -99,17 +99,17 @@
       <AdditionalDependencies>freetype.lib;irrKlang.lib;SOIL.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>XCOPY "$(SolutionDir)night-knight\fonts" "$(TargetDir)fonts\" /S
-XCOPY "$(SolutionDir)night-knight\images" "$(TargetDir)images\" /S
-XCOPY "$(SolutionDir)night-knight\levels" "$(TargetDir)levels\" /S
-XCOPY "$(SolutionDir)night-knight\shaders" "$(TargetDir)shaders\" /S
-XCOPY "$(SolutionDir)night-knight\sound" "$(TargetDir)sound\" /S
-XCOPY "$(SolutionDir)libs\glew-1.13.0\bin\Release\Win32\glew32.dll" "$(TargetDir)"
-XCOPY "$(SolutionDir)libs\freeglut\bin\freeglut.dll" "$(TargetDir)"
-XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\irrKlang.dll" "$(TargetDir)"
-XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\ikpFlac.dll" "$(TargetDir)"
-XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\ikpMP3.dll" "$(TargetDir)"
-XCOPY "$(SolutionDir)libs\freetype-2.3.5-1-bin\bin\freetype6.dll" "$(TargetDir)"</Command>
+      <Command>XCOPY "$(SolutionDir)night-knight\fonts" "$(TargetDir)fonts\" /S /Y
+XCOPY "$(SolutionDir)night-knight\images" "$(TargetDir)images\" /S /Y
+XCOPY "$(SolutionDir)night-knight\levels" "$(TargetDir)levels\" /S /Y
+XCOPY "$(SolutionDir)night-knight\shaders" "$(TargetDir)shaders\" /S /Y 
+XCOPY "$(SolutionDir)night-knight\sound" "$(TargetDir)sound\" /S /Y
+XCOPY "$(SolutionDir)libs\glew-1.13.0\bin\Release\Win32\glew32.dll" "$(TargetDir)" /Y
+XCOPY "$(SolutionDir)libs\freeglut\bin\freeglut.dll" "$(TargetDir)" /Y
+XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\irrKlang.dll" "$(TargetDir)" /Y
+XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\ikpFlac.dll" "$(TargetDir)" /Y
+XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\ikpMP3.dll" "$(TargetDir)" /Y
+XCOPY "$(SolutionDir)libs\freetype-2.3.5-1-bin\bin\freetype6.dll" "$(TargetDir)" /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -131,17 +131,17 @@ XCOPY "$(SolutionDir)libs\freetype-2.3.5-1-bin\bin\freetype6.dll" "$(TargetDir)"
       <AdditionalDependencies>freetype.lib;irrKlang.lib;SOIL.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>XCOPY "$(SolutionDir)night-knight\fonts" "$(TargetDir)fonts\" /S
-XCOPY "$(SolutionDir)night-knight\images" "$(TargetDir)images\" /S
-XCOPY "$(SolutionDir)night-knight\levels" "$(TargetDir)levels\" /S
-XCOPY "$(SolutionDir)night-knight\shaders" "$(TargetDir)shaders\" /S
-XCOPY "$(SolutionDir)night-knight\sound" "$(TargetDir)sound\" /S
-XCOPY "$(SolutionDir)libs\glew-1.13.0\bin\Release\Win32\glew32.dll" "$(TargetDir)"
-XCOPY "$(SolutionDir)libs\freeglut\bin\freeglut.dll" "$(TargetDir)"
-XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\irrKlang.dll" "$(TargetDir)"
-XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\ikpFlac.dll" "$(TargetDir)"
-XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\ikpMP3.dll" "$(TargetDir)"
-XCOPY "$(SolutionDir)libs\freetype-2.3.5-1-bin\bin\freetype6.dll" "$(TargetDir)"</Command>
+      <Command>XCOPY "$(SolutionDir)night-knight\fonts" "$(TargetDir)fonts\" /S /Y
+XCOPY "$(SolutionDir)night-knight\images" "$(TargetDir)images\" /S /Y
+XCOPY "$(SolutionDir)night-knight\levels" "$(TargetDir)levels\" /S /Y
+XCOPY "$(SolutionDir)night-knight\shaders" "$(TargetDir)shaders\" /S /Y 
+XCOPY "$(SolutionDir)night-knight\sound" "$(TargetDir)sound\" /S /Y
+XCOPY "$(SolutionDir)libs\glew-1.13.0\bin\Release\Win32\glew32.dll" "$(TargetDir)" /Y
+XCOPY "$(SolutionDir)libs\freeglut\bin\freeglut.dll" "$(TargetDir)" /Y
+XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\irrKlang.dll" "$(TargetDir)" /Y
+XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\ikpFlac.dll" "$(TargetDir)" /Y
+XCOPY "$(SolutionDir)libs\irrKlang\bin\win32-visualStudio\ikpMP3.dll" "$(TargetDir)" /Y
+XCOPY "$(SolutionDir)libs\freetype-2.3.5-1-bin\bin\freetype6.dll" "$(TargetDir)" /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
