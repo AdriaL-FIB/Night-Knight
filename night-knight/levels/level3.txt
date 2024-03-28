@@ -31,4 +31,4 @@ TILEMAP
 2		//Num enemigos
 0 23 8 1
 2 4 17 1
-
+0
