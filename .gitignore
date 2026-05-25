@@ -364,3 +364,54 @@ FodyWeavers.xsd
 
 
 !libs/**
+
+# Project-local temporary notes
+TEMP_*.md
+
+# CMake/Ninja generated files when configuring outside the preset folders
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+.ninja_*
+build.ninja
+
+# Vendored dependency extras that are not needed by this CMake build
+libs/glew-2.2.0/auto/
+libs/glew-2.2.0/bin/
+libs/glew-2.2.0/lib/
+libs/glew-2.2.0/doc/
+libs/glew-2.2.0/build/vc*/
+libs/glew-2.2.0/build/testbuild/
+
+libs/freeglut-3.6.0/.github/
+libs/freeglut-3.6.0/altbuild/
+libs/freeglut-3.6.0/android/
+libs/freeglut-3.6.0/progs/
+
+libs/freetype-2.13.3/devel/
+libs/freetype-2.13.3/docs/
+libs/freetype-2.13.3/objs/
+libs/freetype-2.13.3/subprojects/
+libs/freetype-2.13.3/tests/
+libs/freetype-2.13.3/builds/amiga/
+libs/freetype-2.13.3/builds/ansi/
+libs/freetype-2.13.3/builds/atari/
+libs/freetype-2.13.3/builds/beos/
+libs/freetype-2.13.3/builds/compiler/
+libs/freetype-2.13.3/builds/dos/
+libs/freetype-2.13.3/builds/meson/
+libs/freetype-2.13.3/builds/os2/
+libs/freetype-2.13.3/builds/symbian/
+libs/freetype-2.13.3/builds/vms/
+libs/freetype-2.13.3/autogen.sh
+libs/freetype-2.13.3/configure
+libs/freetype-2.13.3/Makefile
+libs/freetype-2.13.3/meson.build
+libs/freetype-2.13.3/meson_options.txt
+libs/freetype-2.13.3/MSBuild.*
+libs/freetype-2.13.3/vms_make.com
+
+libs/Simple-OpenGL-Image-Library-master/projects/
+libs/Simple-OpenGL-Image-Library-master/soil.html
