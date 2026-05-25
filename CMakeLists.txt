@@ -68,16 +68,27 @@ set_target_properties(irrKlang PROPERTIES
 set(IRRKLANG_PLUGIN_FILES)
 if(WIN32)
     if(MINGW)
+        if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+            message(FATAL_ERROR "Bundled irrKlang MinGW import libraries are Win32-only. Configure a 32-bit MinGW build, or add a matching x64 libirrKlang.a before building for x64.")
+        endif()
+
         set(IRRKLANG_BIN_DIR "${PROJECT_SOURCE_DIR}/libs/irrKlang/bin/win32-gcc")
         set_target_properties(irrKlang PROPERTIES
             IMPORTED_LOCATION "${IRRKLANG_BIN_DIR}/irrKlang.dll"
             IMPORTED_IMPLIB "${PROJECT_SOURCE_DIR}/libs/irrKlang/lib/Win32-gcc/libirrKlang.a"
         )
     else()
-        set(IRRKLANG_BIN_DIR "${PROJECT_SOURCE_DIR}/libs/irrKlang/bin/win32-visualStudio")
+        if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+            set(IRRKLANG_BIN_DIR "${PROJECT_SOURCE_DIR}/libs/irrKlang/bin/winx64-visualStudio")
+            set(IRRKLANG_IMPLIB "${PROJECT_SOURCE_DIR}/libs/irrKlang/lib/Winx64-visualStudio/irrKlang.lib")
+        else()
+            set(IRRKLANG_BIN_DIR "${PROJECT_SOURCE_DIR}/libs/irrKlang/bin/win32-visualStudio")
+            set(IRRKLANG_IMPLIB "${PROJECT_SOURCE_DIR}/libs/irrKlang/lib/Win32-visualStudio/irrKlang.lib")
+        endif()
+
         set_target_properties(irrKlang PROPERTIES
             IMPORTED_LOCATION "${IRRKLANG_BIN_DIR}/irrKlang.dll"
-            IMPORTED_IMPLIB "${PROJECT_SOURCE_DIR}/libs/irrKlang/lib/Win32-visualStudio/irrKlang.lib"
+            IMPORTED_IMPLIB "${IRRKLANG_IMPLIB}"
         )
     endif()
     list(APPEND IRRKLANG_PLUGIN_FILES
@@ -94,7 +105,12 @@ elseif(APPLE)
         "${IRRKLANG_BIN_DIR}/ikpFLAC.dylib"
     )
 else()
-    set(IRRKLANG_BIN_DIR "${PROJECT_SOURCE_DIR}/libs/irrKlang/bin/linux-gcc")
+    if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+        set(IRRKLANG_BIN_DIR "${PROJECT_SOURCE_DIR}/libs/irrKlang/bin/linux-gcc-64")
+    else()
+        set(IRRKLANG_BIN_DIR "${PROJECT_SOURCE_DIR}/libs/irrKlang/bin/linux-gcc")
+    endif()
+
     set_target_properties(irrKlang PROPERTIES
         IMPORTED_LOCATION "${IRRKLANG_BIN_DIR}/libIrrKlang.so"
     )

@@ -415,3 +415,8 @@ libs/freetype-2.13.3/vms_make.com
 
 libs/Simple-OpenGL-Image-Library-master/projects/
 libs/Simple-OpenGL-Image-Library-master/soil.html
+
+libs/irrKlang/bin/dotnet-*/
+libs/irrKlang-master.zip
+
+libs/**/*.exe
